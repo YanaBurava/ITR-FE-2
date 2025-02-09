@@ -83,35 +83,39 @@
                     </div>
                 </section>
             </div>
-
             <section class="pets-section">
-                <h3>
-                    Our friends who <br /> are looking for a house
-                </h3>
-                    <div class="pets">
-                        <a href="" class="arrow left">arrow</a>
-                        <div class="slider">
-                            <div class="pet">
-                                <img src="images/pets-katrine.png" alt="">
-                                <p>Katrine</p>
-                                <a href="" class="btn-learn">Learn more</a>
-                            </div>
-                            <div class="pet">
-                                <img src="images/pets-jennifer.png" alt="">
-                                <p>Jennifer</p>
-                                <a href="" class="btn-learn">Learn more</a>
-                            </div>
-                            <div class="pet">
-                                <img src="images/pets-woody.png" alt="">
-                                <p>Woody</p>
-                                <a href="" class="btn-learn">Learn more</a>
-                            </div>
+                <h3>Our friends who <br /> are looking for a house</h3>
+                <div class="pets">
+                    <a href="#" class="arrow left">‹</a>
+                    <div class="slider">
+                        <div class="pet" id="0">
+                            <img src="images/pets-katrine.png" alt="Katrine">
+                            <p>Katrine</p>
+                            <button class="btn-learn">Learn more</button>
                         </div>
-                        <a href="" class="arrow right">arrow</a>
+                        <div class="pet" id="1">
+                            <img src="images/pets-jennifer.png" alt="Jennifer">
+                            <p>Jennifer</p>
+                            <button class="btn-learn">Learn more</button>
+                        </div>
+                        <div class="pet" id="2">
+                            <img src="images/pets-woody.png" alt="Woody">
+                            <p>Woody</p>
+                            <button class="btn-learn">Learn more</button>
+                        </div>
                     </div>
-
-                    <a href="" class="btn-rest">Get to know the rest</a>
+                    <a href="#" class="arrow right">›</a>
+                </div>
+                <a href="#" class="btn-rest">Get to know the rest</a>
             </section>
+            
+<!-- Popup window -->
+<div class="overflow" id="overflow" style="visibility: hidden; opacity: 0;">
+    <div class="popup__window" id="popupWindow">
+        <button class="close" id="closePopup">✖</button>
+        <div class="popup__info"></div>
+    </div>
+</div>
 
             <section id="help" class="help-section">
                 <div class="wrapper">
@@ -217,5 +221,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/index.js" type="module"></script> //TODO
     </body>
 </html>

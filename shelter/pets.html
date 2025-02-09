@@ -49,44 +49,34 @@
             Our friends who <br /> are looking for a house
           </h3>
           <div class="pets">
-            <div class="pet">
+            <div class="pet" id="0" >
               <img src="images/pets-katrine.png" alt="">
               <p>Katrine</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
-            <div class="pet">
+            <div class="pet" id="1">
               <img src="images/pets-jennifer.png" alt="">
               <p>Jennifer</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
-            <div class="pet">
+            <div class="pet" id="2">
               <img src="images/pets-woody.png" alt="">
               <p>Woody</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
-            <div class="pet">
-              <img src="images/pets-katrine (1).png" alt="">
-              <p>Sophia</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
+            <div class="pet" id="3">
               <img src="images/pets-timmy.png" alt="">
               <p>Timmy</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
-            <div class="pet">
+            <div class="pet" id="4">
               <img src="images/pets-charly.png" alt="">
               <p>Charly</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
-            <div class="pet">
+            <div class="pet" id="5">
               <img src="images/pets-scarlet.png" alt="">
               <p>Scarlett</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-katrine (2).png" alt="">
-              <p>Freddie</p>
               <a href="" class="btn-learn">Learn more</a>
             </div>
           </div>
@@ -99,7 +89,14 @@
           </div>
         </div>
       </section>
-
+      <!-- Popup window -->
+      <div class="overflow" id="overflow" style="visibility: hidden; opacity: 0;">
+        <div class="popup__window" id="popupWindow">
+            <button class="close" id="closePopup">✖</button>
+            <div class="popup__info"></div>
+        </div>
+      </div>
+      
       <footer id="contact">
         <div class="wrapper">
           <div class="footer-content">
@@ -135,5 +132,7 @@
           </div>
         </div>
       </footer>
+<script src="./js/index.js" type="module"></script> //TODO
     </body>
+
 </html>
