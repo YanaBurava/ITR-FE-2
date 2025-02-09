@@ -79,7 +79,7 @@ const petsArray = [
     {
       id: 7,
       name: 'Freddie',
-      img: '',
+      img: 'images/pets-katrine (1).png',
       type: 'Cat',
       breed: 'British Shorthair',
       description:

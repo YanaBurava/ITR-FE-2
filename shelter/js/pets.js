@@ -1,2 +1,1 @@
 import "./popupModal.js";
-import "./slider.js";
