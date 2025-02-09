@@ -1,0 +1,480 @@
+header{
+    background-image: url(../images/start-screen-gradient-background.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", sans-serif;
+}
+
+.btn-color{
+    padding: 15px 45px;
+    border-radius: 100px;
+    color: #292929;
+    display: inline-block;
+    font-size: 17px;
+    background: #F1CDB3;
+    font-family: "Georgia", sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+    /*nav*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 5vh;
+    position: relative;
+    z-index: 1000;
+}
+
+.title{
+    color: #F1CDB3;
+}
+
+.subtitle{
+    color: #FFFFFF;
+}
+
+nav ul li a{
+    color: #CDCDCD;
+}
+
+nav ul li a:hover{
+    color: #FAFAFA;
+}
+
+nav ul li a.active {
+    color: #FAFAFA;
+}
+
+    /*intro-section*/
+
+.intro-section{
+    display: flex;
+    min-height: 91vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.intro-section .left{
+    width: 40%;
+}
+
+.intro-section .left h2{
+    color: #FFFFFF;
+    font-family: "Georgia", sans-serif;
+    font-size: 44px;
+    line-height: 57.2px;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.intro-section .left p{
+    color: #CDCDCD;
+    font-family: "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+
+.intro-section .right{
+    align-self: flex-end;
+}
+
+.intro-section .right img{
+    vertical-align: middle;
+    width: 100%;
+    height: auto; 
+    max-height: 80vh;
+}
+
+  /*about-section*/
+
+.about-section{
+    display: flex;
+    min-height: fit-content;
+    width: 100%;
+    align-items: center;
+    gap: 10%;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.about-section .right{
+    width: 40%;
+}
+
+.about-section .left{
+    text-align: center;
+}
+
+.about-section .left img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section .right h3{
+    color: #545454;
+    font-family: "Georgia", sans-serif;
+    font-size: 35px;
+    line-height: 45.5px;
+    font-weight: 400;
+}
+
+.about-section .right p{
+    color: #4C4C4C;
+    font-family: "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+  /*pets-section*/
+
+.pets-section{
+    background: #F6F6F6;
+    padding: 5%;
+    min-height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.pets-section h3{
+    color: #545454;
+    font-family: "Georgia", sans-serif;
+    font-size: 35px;
+    line-height: 45.5px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.pets-section .pets{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative; 
+}
+
+.pets-section .pets .slider{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.pets-section .pet{
+    background: #FAFAFA;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.pets-section .pet p{
+    color: #545454;
+    font-family: "Georgia", sans-serif;
+    font-size: 20px;
+    line-height: 22.72px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.pets-section .btn-rest{
+    padding: 15px 45px 15px 45px;
+    color: #292929;
+    display: inline-block;
+    font-size: 17px;
+    font-family: "Georgia", sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 100px;
+    background: #F1CDB3;
+    margin-top: 5%;
+}
+
+.pets-section .arrow{
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    height: 3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1em 1em;
+}
+
+.pets-section .arrow.left{
+    content: url(../images/left-arrow.png);
+}
+
+.pets-section .arrow.right{
+    content: url(../images/right-arrow.png);
+}
+
+  /*help-section*/
+
+.help-section{
+    display: flex;
+    min-height: fit-content;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.help-section h3{
+    color: #545454;
+    font-family: "Georgia", sans-serif;
+    font-size: 35px;
+    line-height: 45.5px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.help-section .help-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.help-section .help-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.help-section .help-item img {
+    height: 60px;
+    margin-bottom: 0.5em;
+}
+
+.help-section .help-item h4{
+    color: #545454;
+    font-family: "Georgia", sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 3em;
+}
+
+/* donation-section*/
+
+.donation-section{
+    min-height: fit-content;
+    background: #F6F6F6;
+}
+
+.donation-section .donation{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10%;
+    padding: 5%;
+}
+
+.donation-section .right{
+    width: 40%;
+}
+
+.donation-section .left{
+    width: 40%;
+    margin-top: 5%;
+}
+
+.donation-section .left img{
+    width: 100%;
+    height: auto;
+}
+
+.donation-section h3{
+    color: #545454;
+    font-size: 35px;
+    line-height: 45.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.donation-section h5{
+    color: #545454;
+    font-size: 15px;
+    line-height: 16.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.donation-section p{
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    color: #B2B2B2;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.donation-section .credit-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F1CDB3;
+    height: 40px;
+    width: fit-content;
+    padding-left: 10px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.donation-section .credit-card h4{
+    color: #545454;
+    font-size: 1em;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+
+@media(max-width: 1170px){
+
+    .intro-section {
+        flex-direction: column;
+        margin-top: 10%;
+        height: auto;
+    }
+
+    .intro-section .right {
+        padding-top: 10%;
+        margin: 0 auto;
+    }
+
+    .intro-section .left{
+        width: 70%;
+        margin-top: 10%;
+    }
+
+    .intro-section .left .make-friend {
+        text-align: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        margin-bottom: 5%;
+        height: auto;
+        justify-content: space-evenly;
+    }
+
+    .about-section .left {
+        order: 2;
+    }
+
+    .about-section .right {
+        order: 1;
+        width: 50%;
+    }
+
+    .pets-section .pets{
+        grid-template-columns: auto repeat(2, 1fr) auto;
+    }
+
+    .pet:nth-child(3) {
+        display: none;
+    }
+
+    .donation {
+        flex-direction: column;
+        height: auto;
+        padding: 5%;
+    }
+
+    .donation-section .donation .left {
+        order: 2;
+        width: 60%;
+    }
+
+    .donation-section .donation .right {
+        order: 1;
+        width: 50%;
+    }
+}
+
+@media(max-width: 800px){
+
+    .intro-section .left{
+        margin-top: 30%;
+    }
+
+    .about-section .right{
+        width: 90%;
+    }
+
+    .pet:nth-child(3) {
+        display: none;
+    }
+
+    .pet:nth-child(2) {
+        display: none;
+    }
+
+    .pets-section .pets {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .pets .slider {
+        grid-column: span 2;
+    }
+
+    .pets .arrow {
+        grid-row: 2;
+        grid-column: auto;
+        justify-self: center;
+    }
+
+    .donation-section .donation .right{
+        width: 90%;
+    }
+
+    .donation-section .credit-card{
+        width: 100%;
+    }
+
+    .donation-section .credit-card h4{
+        font-size: clamp(8px, 4vw, 23px);
+    }
+
+    h3{
+        text-align: center;
+    }
+}
+
+@media(max-width: 620px){
+
+    .menu-icon span{
+        background-color: #F1CDB3;
+    }
+
+}
