@@ -122,7 +122,6 @@ nav ul li a:hover{
 
 .our-pets-section .arrow.left{
     content: url(../images/left-arrow.png);
-    pointer-events: none;
     border: 2px solid #CDCDCD;
     opacity: 0.5;
 }
@@ -133,7 +132,6 @@ nav ul li a:hover{
 
 .our-pets-section .arrow.double-left{
     content: url(../images/left.png);
-    pointer-events: none;
     border: 2px solid #CDCDCD;
     opacity: 0.5;
 }
