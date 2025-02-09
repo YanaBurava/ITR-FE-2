@@ -38,6 +38,31 @@ const petsArray = [
       diseases: ['right back leg mobility reduced'],
       parasites: ['none'],
     },
+    {id: 3,
+    name: 'Timmy',
+    img: 'images/pets-timmy.png',
+    type: 'Cat',
+    breed: 'British Shorthair',
+    description:
+      'Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.',
+    age: '2 years 3 months',
+    inoculations: ['calicivirus', 'viral rhinotracheitis'],
+    diseases: ['kidney stones'],
+    parasites: ['none'],
+  },
+{
+    id: 4,
+    name: 'Charly',
+    img: 'images/pets-charly.png',
+    type: 'Dog',
+    breed: 'Jack Russell Terrier',
+    description:
+      'This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.',
+    age: '8 years',
+    inoculations: ['bordetella bronchiseptica', 'leptospirosis'],
+    diseases: ['deafness', 'blindness'],
+    parasites: ['lice', 'fleas'],
+  },
     {
       id: 5,
       name: 'Scarlett',
@@ -52,19 +77,6 @@ const petsArray = [
       parasites: ['none'],
     },
     {
-      id: 3,
-      name: 'Timmy',
-      img: 'images/pets-timmy.png',
-      type: 'Cat',
-      breed: 'British Shorthair',
-      description:
-        'Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.',
-      age: '2 years 3 months',
-      inoculations: ['calicivirus', 'viral rhinotracheitis'],
-      diseases: ['kidney stones'],
-      parasites: ['none'],
-    },
-    {
       id: 7,
       name: 'Freddie',
       img: '',
@@ -76,19 +88,6 @@ const petsArray = [
       inoculations: ['rabies'],
       diseases: ['none'],
       parasites: ['none'],
-    },
-    {
-      id: 4,
-      name: 'Charly',
-      img: 'images/pets-charly.png',
-      type: 'Dog',
-      breed: 'Jack Russell Terrier',
-      description:
-        'This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.',
-      age: '8 years',
-      inoculations: ['bordetella bronchiseptica', 'leptospirosis'],
-      diseases: ['deafness', 'blindness'],
-      parasites: ['lice', 'fleas'],
     },
   ];
   

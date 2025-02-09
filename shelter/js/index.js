@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+// POPUP
+
 import petsArray from './petsInfo.js'; 
 
 const popupWindow = document.getElementById('popupWindow');
@@ -5,10 +15,9 @@ const closePopup = document.getElementById('closePopup');
 const overflow = document.getElementById('overflow');
 const body = document.body;
 
-// Функция для генерации информации о питомце в попапе
 function GeneratePopupInfo(card) {
     const id = parseInt(card.id);
-    const pet = petsArray[id]; // Здесь petsArray должно быть массивом питомцев с данными
+    const pet = petsArray[id]; 
 
     if (!pet) {
         console.error('Питомец не найден для ID:', id);
@@ -42,11 +51,9 @@ function GeneratePopupInfo(card) {
 </div>
 `;
 }
-// Обработчик клика по карточке питомца (открытие попапа)
 document.body.addEventListener('click', (event) => {
     const petCard = event.target.closest('.pet');
     if (petCard) {
-        // Показываем попап
         overflow.style.visibility = "visible";
         overflow.style.opacity = "1";
         popupWindow.style.display = 'block';
@@ -55,22 +62,54 @@ document.body.addEventListener('click', (event) => {
     }
 });
 
-// Обработчик клика по кнопке закрытия попапа
 closePopup.addEventListener('click', () => {
     closePopupWindow();
 });
 
-// Обработчик клика по области "overflow" для закрытия попапа
 overflow.addEventListener('click', (event) => {
-    if (event.target === overflow) { // Проверяем, был ли клик именно по области вокруг попапа
+    if (event.target === overflow) { 
         closePopupWindow();
     }
 });
 
-// Закрытие попапа — общая функция для всех случаев
 function closePopupWindow() {
     overflow.style.visibility = "hidden";
     overflow.style.opacity = "0";
     popupWindow.style.display = 'none';
     body.classList.remove("stop-scrolling");
 }
+
+
+// Slider
+const btnLeft = document.querySelector('.arrow.left');
+const btnRight = document.querySelector('.arrow.right');
+const sliderTrack = document.querySelector('.slider');
+
+init();
+
+function drawSlides(direction) {
+    const slides = Array.from(sliderTrack.children); 
+
+    if (direction === 'Right') {
+        const firstSlide = slides.shift();
+        sliderTrack.appendChild(firstSlide);
+    } else if (direction === 'Left') {
+       
+        const lastSlide = slides.pop();
+        sliderTrack.insertBefore(lastSlide, slides[0]);
+    }
+}
+
+function init() {
+    drawSlides('Right');
+}
+
+btnLeft.addEventListener('click', (event) => {
+    event.preventDefault();
+    drawSlides('Left');
+});
+
+btnRight.addEventListener('click', (event) => {
+    event.preventDefault();
+    drawSlides('Right');
+});
