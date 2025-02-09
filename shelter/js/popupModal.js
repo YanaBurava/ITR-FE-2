@@ -1,17 +1,9 @@
-
-
-
-
-
-
-
-
 // POPUP
 
 import petsArray from './petsInfo.js'; 
 const slider = document.querySelector('.slider');
 
-function createPetCard(pet) {
+export function createPetCard(pet) {
     const petDiv = document.createElement('div');
     petDiv.classList.add('pet');
     petDiv.setAttribute('id', pet.id);
