@@ -16,30 +16,32 @@
                         <p class="subtitle">Shelter for pets in Boston</p>
                     </div>
                     <div class="menu-list">
-                        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
                         <label for="menu-toggle" class="menu-icon">
                             <span></span>
                             <span></span>
                             <span></span>
                         </label>
+
                         <ul class="menu">
-                            <li>
-                                <a href="#about" class="active">About the shelter</a>
+                            <li class="menu__item">
+                                <a class="menu__link menu__link_active" href="#about">About the shelter</a>
                             </li>
-                            <li>
-                                <a href="pets.html">Our pets</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="pets.html">Our pets</a>
                             </li>
-                            <li>
-                                <a href="#help">Help the shelter</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#help">Help the shelter</a>
                             </li>
-                            <li>
-                                <a href="#contact">Contacts</a>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#footer">Contacts</a>
                             </li>
                         </ul>
+                        <div class="overlay"></div>
                     </div>
                 </nav>
 
-                <div class="intro-section">
+               <div class="intro-section">
                     <div class="left">
                         <h2>
                             Not only people <br /> need a house
@@ -53,7 +55,7 @@
                             <a href="" class="btn-color">Make a friend</a>
                         </div>
                     </div>
-                
+
                     <div class="right">
                         <img src="images/start-screen-puppy.png" alt="">
                     </div>

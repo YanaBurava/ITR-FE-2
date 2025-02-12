@@ -26,8 +26,7 @@ a:hover{
 }
 
 /* nav */
-
-.title{
+.title {
     font-family: "Georgia", sans-serif;
     font-size: 32px;
     letter-spacing: 1px;
@@ -35,45 +34,84 @@ a:hover{
     white-space: nowrap;
 }
 
-.subtitle{
+.subtitle {
     font-family: "Arial", sans-serif;
     font-size: 13px;
     letter-spacing: 1px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
     gap: 50px;
     list-style: none;
     margin: 0;
+    left: 50%;
 }
 
-nav ul li a{
-    font-family: "Arial", sans-serif;
-    font-size: 15px;
-    text-decoration: none;
-}
+    nav ul li a {
+        font-family: "Arial", sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+    }
 
-nav ul li a.active {
-    text-decoration: underline;
-    text-decoration-color: #F1CDB3;
-    text-decoration-thickness: 3px;
-    text-underline-position: under;
-}
+        nav ul li a.active {
+            text-decoration: underline;
+            text-decoration-color: #F1CDB3;
+            text-decoration-thickness: 3px;
+            text-underline-position: under;
+        }
 
-.menu-list{
+.menu-list {
     position: relative;
 }
 
 .menu-toggle {
-    display: none;
+    display: none; 
 }
 
 .menu-icon {
-    display: none;
+    display: none; 
     cursor: pointer;
 }
+
+
+@media (max-width: 768px) {
+
+    .menu__body_show {
+        transform: translateX(0); 
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+    }
+
+    .overlay_show {
+        display: block;
+    }
+
+    .body_lock {
+        overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            right: -100%;
+        }
+
+        .overlay_show {
+            display: block; 
+        }
+    }
+
+
 
   /*  pets section  */
 
@@ -178,16 +216,30 @@ footer .footer-content .image img{
 }
 @media(max-width: 620px){
 
+    .menu {
+        position: fixed;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #292929;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
     .menu-toggle:checked ~ .menu {
         display: flex;
         padding: 0;
     }
 
-    .menu-icon span{
+
+    .menu-icon span {
         display: block;
         height: 1%;
         width: 100%;
         margin: 40% 0;
+        border-radius: 2px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .menu-icon {
@@ -199,13 +251,18 @@ footer .footer-content .image img{
         top: 5%;
         right: 5%;
         z-index: 1100;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-icon_open {
+        transform: rotate(90deg);
     }
 
     nav ul {
         display: none;
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
         width: 100%;
         height: 100%;
         background-color: #292929;
@@ -219,7 +276,6 @@ footer .footer-content .image img{
     }
 }
 
-/* Основной контейнер попапа */
 .popup__window {
     display: none;
     position: fixed;
@@ -233,7 +289,6 @@ footer .footer-content .image img{
     border-radius: 9px;
 }
 
-/* Кнопка закрытия попапа */
 .popup__window .close {
     position: absolute;
     background-image: url("assets/icons/popup.svg");
@@ -253,7 +308,6 @@ footer .footer-content .image img{
     background-color: #FDDCC4;
 }
 
-/* Контейнер с контентом попапа */
 .popup__window .popup__info {
     display: flex;
     height: 100%;
@@ -265,7 +319,6 @@ footer .footer-content .image img{
     object-fit: cover;
 }
 
-/* Адаптивные стили для разных разрешений */
 @media (max-width: 1279px) {
     .popup__window {
         width: 630px;
@@ -288,7 +341,6 @@ footer .footer-content .image img{
         left: calc(50% - 120px);
     }
 
-    /* Скрываем изображение на мобильных устройствах */
     .popup__window .popup__info img {
         display: none;
     }
@@ -298,7 +350,6 @@ footer .footer-content .image img{
     }
 }
 
-/* Текст и список внутри попапа */
 .popup__window .popup__info .popup__text {
     height: 100%;
     padding-top: 50px;
@@ -370,7 +421,7 @@ footer .footer-content .image img{
     }
 }
 
-/* Стили для списка */
+
 .popup__window .popup__info .popup__text li {
     font-family: "Georgia", Times, sans;
     font-size: 1.5rem;
