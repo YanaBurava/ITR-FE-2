@@ -14,32 +14,34 @@
           <div class="wrapper">
             <nav>
               <div class="logo">
-                <p class="title">Cozy House</p>
-                <p class="subtitle">Shelter for pets in Boston</p>
+                  <p class="title">Cozy House</p>
+                  <p class="subtitle">Shelter for pets in Boston</p>
               </div>
               <div class="menu-list">
-                  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                  <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
                   <label for="menu-toggle" class="menu-icon">
                       <span></span>
                       <span></span>
                       <span></span>
                   </label>
+
                   <ul class="menu">
-                    <li>
-                      <a href="index.html">About the shelter</a>
-                    </li>
-                    <li>
-                      <a href="pets.html" class="active">Our pets</a>
-                    </li>
-                    <li>
-                      <a href="">Help the shelter</a>
-                    </li>
-                    <li>
-                      <a href="#contact">Contacts</a>
-                    </li>
-                </ul>
+                      <li class="menu__item">
+                          <a class="menu__link " href="index.html">About the shelter</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link menu__link_active" href="#pets">Our pets</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link" href="#help">Help the shelter</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link" href="#footer">Contacts</a>
+                      </li>
+                  </ul>
+                  <div class="overlay"></div>
               </div>
-            </nav>
+          </nav>
           </div>
         </header>
 

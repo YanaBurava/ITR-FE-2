@@ -4,13 +4,14 @@ const overlay = document.querySelector('.overlay');
 
 function toggleMenu() {
     const isOpen = menu.classList.contains('open');
-
+    overlay.classList.toggle('overlay_show'); 
+    menuIcon.classList.toggle('menu-icon_open'); 
     if (isOpen) {
-        // Если меню открыто — закрываем его и затемнение одновременно
+        
         menu.classList.remove('open');
         overlay.classList.remove('overlay_show');
     } else {
-        // Если меню закрыто — открываем его и затемнение одновременно
+  
         menu.classList.add('open');
         overlay.classList.add('overlay_show');
     }
@@ -20,7 +21,7 @@ menuIcon.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
 
 menu.addEventListener('click', (e) => {
-    const link = e.target.closest('.menu__link'); // Используем `closest` для надежности
+    const link = e.target.closest('.menu__link'); 
     if (!link) return;
 
     e.preventDefault();
@@ -28,9 +29,9 @@ menu.addEventListener('click', (e) => {
 
     console.log('Клик по ссылке:', href);
 
-    // Закрываем меню и затемнение
     menu.classList.remove('open');
     overlay.classList.remove('overlay_show');
+    menuIcon.classList.remove('menu-icon_open');
 
     console.log('После клика:');
     console.log('Menu open:', menu.classList.contains('open'));

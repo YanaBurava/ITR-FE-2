@@ -183,16 +183,18 @@ footer .footer-content .image img{
     .menu {
         position: fixed;
         top: 0;
-        left: -100%; /* Изначально меню за пределами экрана */
+        right: 0; /* Изначально меню за пределами экрана */
         width: 100%;
         height: 100%;
         background-color: #292929;
         transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
         z-index: 1000;
+        align-items:flex-start; 
     }
 
     .menu.open {
-        transform: translateX(100%); 
+        transform: translateX(0);
         width: 80%;    
     }
 
@@ -258,7 +260,8 @@ footer .footer-content .image img{
     }
 
     nav ul li a {
-        font-size: 24px;
+        font-size: 21px;
+        padding: 1px;
     }
 }
 
