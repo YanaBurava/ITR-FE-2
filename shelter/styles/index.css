@@ -508,7 +508,7 @@ nav ul li a.active {
         justify-content: center;
     }
     .pet {
-        min-width: 33.33%; /* Each slide takes 1/3 of the container */
+        min-width: 100%; 
         padding: 10px;
         box-sizing: border-box;
     }

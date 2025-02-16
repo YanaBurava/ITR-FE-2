@@ -76,42 +76,6 @@ nav ul {
 }
 
 
-@media (max-width: 768px) {
-
-    .menu__body_show {
-        transform: translateX(0); 
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: none;
-        z-index: 999;
-    }
-
-    .overlay_show {
-        display: block;
-    }
-
-    .body_lock {
-        overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-        .menu {
-            right: -100%;
-        }
-
-        .overlay_show {
-            display: block; 
-        }
-    }
-}
-
 
 
   /*  pets section  */
@@ -215,24 +179,45 @@ footer .footer-content .image img{
         margin: 0;
     }
 }
-@media(max-width: 620px){
-
+@media (max-width: 620px) {
     .menu {
         position: fixed;
         top: 0;
-        width: 300px;
+        left: -100%; /* Изначально меню за пределами экрана */
+        width: 100%;
         height: 100%;
         background-color: #292929;
         transition: transform 0.3s ease-in-out;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+    }
+
+    .menu.open {
+        transform: translateX(100%); 
+        width: 80%;    
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .overlay_show {
+        opacity: 1;
+        visibility: visible;
     }
 
     .menu-toggle:checked ~ .menu {
         display: flex;
         padding: 0;
     }
-
 
     .menu-icon span {
         display: block;
@@ -260,7 +245,7 @@ footer .footer-content .image img{
     }
 
     nav ul {
-        display: none;
+        display: flex;
         position: fixed;
         top: 0;
         left: 50%;
@@ -272,10 +257,11 @@ footer .footer-content .image img{
         align-items: center;
     }
 
-    nav ul li a{
-        font-size: 28px;
+    nav ul li a {
+        font-size: 24px;
     }
 }
+
 
 .popup__window {
     display: none;

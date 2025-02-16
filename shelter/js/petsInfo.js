@@ -78,7 +78,7 @@ const petsArray = [
       parasites: ['none'],
     },
     {
-      id: 7,
+      id: 6,
       name: 'Freddie',
       img: 'images/pets-katrine (1).png',
       type: 'Cat',
@@ -91,7 +91,7 @@ const petsArray = [
       parasites: ['none'],
     },
     {
-        id: 3,
+        id: 7,
         name: 'Timmy',
         img: 'images/pets-timmy.png',
         type: 'Cat',
@@ -104,7 +104,7 @@ const petsArray = [
         parasites: ['none'],
       },
       {
-        id: 4,
+        id: 8,
         name: 'Charly',
         img: 'images/pets-charly.png',
         type: 'Dog',
@@ -117,7 +117,7 @@ const petsArray = [
         parasites: ['lice', 'fleas'],
       },
         {
-          id: 5,
+          id: 9,
           name: 'Scarlett',
           img: 'images/pets-scarlet.png',
           type: 'Dog',
@@ -130,7 +130,7 @@ const petsArray = [
           parasites: ['none'],
         },
         {
-          id: 7,
+          id: 10,
           name: 'Freddie',
           img: 'images/pets-katrine (1).png',
           type: 'Cat',
@@ -143,7 +143,7 @@ const petsArray = [
           parasites: ['none'],
         },
         {
-            id: 3,
+            id: 11,
             name: 'Timmy',
             img: 'images/pets-timmy.png',
             type: 'Cat',
@@ -156,7 +156,7 @@ const petsArray = [
             parasites: ['none'],
           },
           {
-            id: 4,
+            id: 12,
             name: 'Charly',
             img: 'images/pets-charly.png',
             type: 'Dog',
@@ -169,7 +169,7 @@ const petsArray = [
             parasites: ['lice', 'fleas'],
           },
             {
-              id: 5,
+              id: 13,
               name: 'Scarlett',
               img: 'images/pets-scarlet.png',
               type: 'Dog',
@@ -182,7 +182,7 @@ const petsArray = [
               parasites: ['none'],
             },
             {
-              id: 7,
+              id: 14,
               name: 'Freddie',
               img: 'images/pets-katrine (1).png',
               type: 'Cat',
@@ -195,7 +195,7 @@ const petsArray = [
               parasites: ['none'],
             },
             {
-                id: 3,
+                id: 15,
                 name: 'Timmy',
                 img: 'images/pets-timmy.png',
                 type: 'Cat',
@@ -208,7 +208,7 @@ const petsArray = [
                 parasites: ['none'],
               },
               {
-                id: 4,
+                id: 16,
                 name: 'Charly',
                 img: 'images/pets-charly.png',
                 type: 'Dog',
@@ -221,7 +221,7 @@ const petsArray = [
                 parasites: ['lice', 'fleas'],
               },
                 {
-                  id: 5,
+                  id: 17,
                   name: 'Scarlett',
                   img: 'images/pets-scarlet.png',
                   type: 'Dog',
@@ -234,7 +234,7 @@ const petsArray = [
                   parasites: ['none'],
                 },
                 {
-                  id: 7,
+                  id: 18,
                   name: 'Freddie',
                   img: 'images/pets-katrine (1).png',
                   type: 'Cat',

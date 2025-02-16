@@ -4,8 +4,8 @@ const sliderTrack = document.querySelector('.slider');
 
 function shiftRight() {
     const firstPet = sliderTrack.firstElementChild;
-    sliderTrack.appendChild(firstPet.cloneNode(true)); // Копируем первый элемент
-    sliderTrack.removeChild(firstPet); // Удаляем оригинал
+    sliderTrack.appendChild(firstPet.cloneNode(true)); 
+    sliderTrack.removeChild(firstPet); 
 }
 
 function shiftLeft() {
