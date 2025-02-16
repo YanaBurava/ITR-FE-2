@@ -24,7 +24,7 @@ menu.addEventListener('click', (e) => {
     const link = e.target.closest('.menu__link'); 
     if (!link) return;
 
-    e.preventDefault();
+  //   e.preventDefault();
     const href = link.getAttribute('href');
 
     console.log('Клик по ссылке:', href);
@@ -45,5 +45,9 @@ menu.addEventListener('click', (e) => {
                 block: 'start',
             });
         }
+    } else 
+    {
+       
+        window.location.href = href;
     }
 });
