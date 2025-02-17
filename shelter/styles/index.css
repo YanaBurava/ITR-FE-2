@@ -5,8 +5,53 @@ header{
     background-repeat: no-repeat;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Georgia", sans-serif;
+:root {
+    --font-family--georgia: 'Georgia', serif;
+    --font-family--arial: 'Arial', sans-serif;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-primary: #f1cdb3;
+    --color-primary-light: #fddcc4;
+    --color-dark-3xl: #292929;
+    --color-dark-2xl: #444444;
+    --color-dark-xl: #4c4c4c;
+    --color-dark-l: #545454;
+    --color-dark-m: #b2b2b2;
+    --color-dark-s: #cdcdcd;
+    --color-light-l: #f6f6f6;
+    --color-light-s: #fafafa;
+  
+    --viewport--xs: 320px;
+    --viewport--md: 768px;
+    --viewport--lg: 1280px;
+  }
+  
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family--georgia);
+  color: var(--color-dark-l);
+  font-weight: 400;
+}
+h2 {
+  font-size: 44px;
+  line-height: 57px;
+}
+h3 {
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+}
+h4 {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+h5 {
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
 }
 
 .btn-color{
@@ -444,8 +489,28 @@ nav ul li a.active {
         gap: 10px;
     }
 
+    pets {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for the container */
+        gap: 20px;
+        position: relative;
+    }
+
     .pets .slider {
-        grid-column: span 2;
+        grid-column: span 2; /* Stretch slider across two columns */
+        display: flex; /* Flexbox for horizontal layout */
+        transition: transform 0.5s ease; /* Smooth transition */
+        overflow: hidden; /* Hide overflowed slides */
+    }
+    .slider__track {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .pet {
+        min-width: 100%; 
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .pets .arrow {
@@ -478,3 +543,225 @@ nav ul li a.active {
     }
 
 }
+
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Контейнер для слайдера */
+}
+
+
+
+
+
+
+
+.popup__window {
+    display: none;
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 450px);
+    z-index: 18;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: #FAFAFA;
+    border-radius: 9px;
+  }
+  .popup__window .close {
+    position: absolute;
+    background-image: url("assets/icons/popup.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -52px;
+    right: -30px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+  }
+  .popup__window .close:hover {
+    cursor: pointer;
+    border-color: #FDDCC4;
+    background-color: #FDDCC4;
+  }
+  .popup__window .popup__info {
+    display: flex;
+    height: 100%;
+  }
+  .popup__window .popup__info img {
+    width: 500px;
+    height: 500px;
+  }
+  @media (max-width: 1279px) {
+    .popup__window .popup__info img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info img {
+      display: none;
+    }
+  }
+  .popup__window .popup__info .popup__text {
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+  @media (max-width: 1279px) {
+    .popup__window .popup__info .popup__text {
+      overflow-y: scroll;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info .popup__text {
+      padding: 10px;
+    }
+  }
+  .popup__window .popup__info .popup__text .popup__heading {
+    font-family: "Georgia", Times, sans;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info .popup__text .popup__heading {
+      text-align: center;
+    }
+  }
+  .popup__window .popup__info .popup__text .popup__subheading {
+    font-family: "Georgia", Times, sans;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.06em;
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info .popup__text .popup__subheading {
+      text-align: center;
+    }
+  }
+  .popup__window .popup__info .popup__text p {
+    font-family: "Georgia", Times, sans;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.06em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 1279px) {
+    .popup__window .popup__info .popup__text p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+    }
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info .popup__text p {
+      text-align: justify;
+      margin-bottom: 24px;
+    }
+  }
+  .popup__window .popup__info .popup__text li {
+    font-family: "Georgia", Times, sans;
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    letter-spacing: 0.06em;
+    padding-left: 14px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  @media (max-width: 767.9px) {
+    .popup__window .popup__info .popup__text li {
+      margin-bottom: 5px;
+    }
+  }
+  .popup__window .popup__info .popup__text li:after {
+    content: url("assets/icons/dot.svg");
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+  .popup__window .popup__info .popup__text li span {
+    font-weight: 700;
+  }
+  @media (max-width: 1279px) {
+    .popup__window {
+      width: 630px;
+      height: 350px;
+      top: calc(50% - 175px);
+      left: calc(50% - 315px);
+    }
+  }
+  @media (max-width: 767.9px) {
+    .popup__window {
+      width: 240px;
+      height: 342px;
+      top: calc(50% - 171px);
+      left: calc(50% - 120px);
+    }
+  }
+  
+
+
+
+
+
+  /* Modal START */
+.popup__title,
+.popup__subtitle,
+.popup__description,
+.popup__list-item-title,
+.popup__list-item-text {
+    color: var(--color-black);
+    margin: 0;
+}
+
+.popup__title {
+    margin-bottom: 10px;
+}
+
+.popup__subtitle {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.popup__description {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    margin: 40px 0;
+}
+
+.popup__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding-left: 14px;
+}
+
+.popup__list-item-title {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.popup__list-item-text {
+    display: inline-block;
+}
+
+.popup__list li::marker {
+    color: var(--color-primary);
+}
+  /* Modal END */
+  

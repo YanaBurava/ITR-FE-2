@@ -14,32 +14,34 @@
           <div class="wrapper">
             <nav>
               <div class="logo">
-                <p class="title">Cozy House</p>
-                <p class="subtitle">Shelter for pets in Boston</p>
+                  <p class="title">Cozy House</p>
+                  <p class="subtitle">Shelter for pets in Boston</p>
               </div>
               <div class="menu-list">
-                  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                  <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
                   <label for="menu-toggle" class="menu-icon">
                       <span></span>
                       <span></span>
                       <span></span>
                   </label>
+
                   <ul class="menu">
-                    <li>
-                      <a href="index.html">About the shelter</a>
-                    </li>
-                    <li>
-                      <a href="pets.html" class="active">Our pets</a>
-                    </li>
-                    <li>
-                      <a href="">Help the shelter</a>
-                    </li>
-                    <li>
-                      <a href="#contact">Contacts</a>
-                    </li>
-                </ul>
+                      <li class="menu__item">
+                          <a class="menu__link " href="index.html">About the shelter</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link menu__link_active" href="#pets">Our pets</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link" href="#help">Help the shelter</a>
+                      </li>
+                      <li class="menu__item">
+                          <a class="menu__link" href="#footer">Contacts</a>
+                      </li>
+                  </ul>
+                  <div class="overlay"></div>
               </div>
-            </nav>
+          </nav>
           </div>
         </header>
 
@@ -48,58 +50,25 @@
           <h3>
             Our friends who <br /> are looking for a house
           </h3>
-          <div class="pets">
-            <div class="pet">
-              <img src="images/pets-katrine.png" alt="">
-              <p>Katrine</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-jennifer.png" alt="">
-              <p>Jennifer</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-woody.png" alt="">
-              <p>Woody</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-katrine (1).png" alt="">
-              <p>Sophia</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-timmy.png" alt="">
-              <p>Timmy</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-charly.png" alt="">
-              <p>Charly</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-scarlet.png" alt="">
-              <p>Scarlett</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
-            <div class="pet">
-              <img src="images/pets-katrine (2).png" alt="">
-              <p>Freddie</p>
-              <a href="" class="btn-learn">Learn more</a>
-            </div>
+          <div class="pets" id="pets-c">
           </div>
-          <div class="pagination">
-            <a href="" class="arrow double-left">arrow</a>
-            <a href="" class="arrow left">arrow</a>
-            <a href="" class="page-number">1</a>
-            <a href="" class="arrow right">arrow</a>
-            <a href="" class="arrow double-right">arrow</a>
+          <div class="pagination" id="pagination-container">
+            <a href="#" class="arrow double-left" id="double-left">««</a>
+            <a href="#" class="arrow left" id="left">«</a>
+            <a href="#" class="page-number" id="page-number">1</a>
+            <a href="#" class="arrow right" id="right">»</a>
+            <a href="#" class="arrow double-right" id="double-right">»»</a>
           </div>
-        </div>
+          </div>
       </section>
-
+      <!-- Popup window -->
+      <div class="overflow" id="overflow" style="visibility: hidden; opacity: 0;">
+        <div class="popup__window" id="popupWindow">
+            <button class="close" id="closePopup">✖</button>
+            <div class="popup__info"></div>
+        </div>
+      </div>
+      
       <footer id="contact">
         <div class="wrapper">
           <div class="footer-content">
@@ -135,5 +104,7 @@
           </div>
         </div>
       </footer>
+<script src="./js/pets.js" type="module"></script> //TODO
     </body>
+
 </html>
